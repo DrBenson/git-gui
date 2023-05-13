@@ -6,89 +6,242 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: git-gui glossary\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-12 11:41+0800\n"
+"POT-Creation-Date: 2020-01-26 22:26+0100\n"
+"PO-Revision-Date: 2023-05-13 17:33+0800\n"
 "Last-Translator: DrBenson <Benson.Dr@GMail.com>\n"
 "Language-Team: Traditional Chinese\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Language: zh_TW\n"
 "X-Source-Language: C\n"
 
 #. "English Definition (Dear translator: This file will never be visible to the user! It should only serve as a tool for you, the translator. Nothing more.)"
 msgid ""
 "English Term (Dear translator: This file will never be visible to the user!)"
-msgstr "注: 這個檔案是為了輔助說明翻譯人員統一名詞術語。(一般使用者並不會看到這個檔案!)"
+msgstr ""
+"注: 這個檔案是為了輔助說明翻譯人員統一名詞術語。(一般使用者並不會看到這個檔"
+"案!)"
+
+#. "prematurely stop and abandon an operation"
+msgid "abort"
+msgstr "終止"
 
 # 修正，其實每次amend的結果也不一定就是最后結果，說不定還需要修改。所以不
 # 如就叫修改
-#. ""amend指使用者修改最近一次commit的作業，修訂？修改？修正？[WANG Cong]: 根據我的了解，這個詞似乎翻譯成“修訂”多一些。“修正”也可以，“修改”再次之。[ZHANG Le]: 修訂，感覺一般指對一些大型出版物的大規模升級，比如修訂新華字典
+#. ""
 msgid "amend"
 msgstr "修訂"
 
-#. ""git annotate 檔名：用來標注檔案的每一行在什么時候被誰最后修改。[WANG Cong]: "記號"一般是mark。;)[ZHANG Le]: 標注，或者干脆用原意：注解，或註釋
+#. "a commit that succeeds the current one in git's graph of commits (not necessarily directly)"
+msgid "ancestor"
+msgstr "原始來源"
+
+#. ""
 msgid "annotate"
 msgstr "注釋"
 
+#. "The person who initially created (authored) a commit"
+msgid "author"
+msgstr "作者"
+
+#. "a repository with only .git directory, without working directory"
+msgid "bare repository"
+msgstr "單純的程式儲存庫"
+
+#. "a parent version of the current file"
+msgid "base"
+msgstr "原始基礎"
+
+#. ""
+msgid "bisect"
+msgstr "分成兩部份"
+
+#. "get the authors responsible for each line in a file"
+msgid "blame"
+msgstr "過失指正"
+
+#. ""
+msgid "blob"
+msgstr ""
+
 #. "A 'branch' is an active line of development."
 msgid "branch [noun]"
-msgstr "分支"
+msgstr "分支 [noun]"
 
 #. ""
 msgid "branch [verb]"
-msgstr "建立分支"
+msgstr "建立分支 [verb]"
 
-#. ""[WANG Cong]: 網上有人翻譯成“檢出”，我感覺更好一些，畢竟把check的意思翻譯出來了。[ZHNAG Le]: 擷取吧，擷取分支／版本[rae l]: 簽出。subversion軟體中的大多辭彙已有翻譯，既然git與subversion同是SCM管理，可以參照同類軟體的翻譯也不錯。
+#. ""
 msgid "checkout [noun]"
-msgstr "檢測"
+msgstr "檢測 [noun]"
 
 #. "The action of updating the working tree to a revision which was stored in the object database."
 msgid "checkout [verb]"
-msgstr "檢測"
+msgstr "檢測 [verb]"
+
+#. "to select and apply a single commit to the current HEAD without merging"
+msgid "cherry-pick"
+msgstr ""
+
+#. "a commit that directly succeeds the current one in git's graph of commits"
+msgid "child commit"
+msgstr "提交子項"
+
+#. "clean the state of the git repository, often after manually stopped operation"
+msgid "cleanup"
+msgstr "清理"
+
+#. ""
+msgid "clone [verb]"
+msgstr "複製 [verb]"
 
 #. "A single point in the git history."
 msgid "commit [noun]"
-msgstr "提交"
+msgstr "提交 [noun]"
 
 #. "The action of storing a new snapshot of the project's state in the git history."
 msgid "commit [verb]"
-msgstr "提交"
+msgstr "提交 [verb]"
 
-#. ""差異？差別？[ZHANG Le]: 個人感覺差別更加中性一些
+#. "a message that gets attached with any commit"
+msgid "commit message"
+msgstr "提交說明訊息"
+
+#. "The person who committed a commit (to the current branch), which might be different than the author."
+msgid "committer"
+msgstr "提交者"
+
+#. "a commit that precedes the current one in git's graph of commits (not necessarily directly)"
+msgid "descendant"
+msgstr ""
+
+#. "checkout of a revision rather than some head"
+msgid "detached HEAD"
+msgstr ""
+
+#. "checkout of a revision rather than some head"
+msgid "detached checkout"
+msgstr "分離的檢測"
+
+#. ""
 msgid "diff [noun]"
-msgstr "差異"
+msgstr "差異 [noun]"
 
 #. ""
 msgid "diff [verb]"
-msgstr "差異"
+msgstr "差異 [verb]"
 
-#. "A fast-forward is a special type of merge where you have a revision and you are merging another branch's changes that happen to be a descendant of what you have."
-msgid "fast forward merge"
-msgstr "快進式合併"
+#. ""
+msgid "directory"
+msgstr "目錄"
 
-#. "Fetching a branch means to get the branch's head from a remote repository, to find out which objects are missing from the local object database, and to get them, too."提取？取得？下載？更新？注意和update的區分
+#. "A fast-forward merge is a special type of merge where you have a revision and you are merging another branch's changes that happen to be a descendant of what you have."
+msgid "fast-forward"
+msgstr "快速合併"
+
+#. "Fetching a branch means to get the branch's head from a remote repository, to find out which objects are missing from the local object database, and to get them, too."
 msgid "fetch"
 msgstr "提取"
 
-#. "A collection of files. The index is a stored version of your working tree."index是working tree和repository之間的緩衝區
+#. "any merge strategy that works on a file by file basis"
+msgid "file level merging"
+msgstr ""
+
+#. ""
+msgid "file"
+msgstr "檔案"
+
+#. "the last revision in a branch"
+msgid "head"
+msgstr "HEAD"
+
+#. "script that gets executed automatically on some event"
+msgid "hook"
+msgstr ""
+
+#. "One context of consecutive lines in a whole patch, which consists of many such hunks"
+msgid "hunk"
+msgstr ""
+
+#. "A collection of files. The index is a stored version of your working tree."
 msgid "index (in git-gui: staging area)"
 msgstr "工作暫存區"
 
+#. "the first checkout during a clone operation"
+msgid "initial checkout"
+msgstr "初始化檢測"
+
+#. "The very first commit in a repository"
+msgid "initial commit"
+msgstr "初始化提交說明"
+
+#. "a branch that resides in the local git repository"
+msgid "local branch"
+msgstr "區域分支"
+
+#. "a Git object that is not part of any pack"
+msgid "loose object"
+msgstr "鬆散物件"
+
+#. "a branch called by convention 'master' that exists in a newly created git repository"
+msgid "master branch"
+msgstr "主要分支"
+
 #. "A successful merge results in the creation of a new commit representing the result of the merge."
 msgid "merge [noun]"
-msgstr "合併"
+msgstr "合併 [noun]"
 
 #. "To bring the contents of another branch into the current branch."
 msgid "merge [verb]"
-msgstr "合併"
+msgstr "合併 [verb]"
 
-#. ""message是指commit中的文字資訊
+#. ""
 msgid "message"
 msgstr "訊息"
+
+#. "a remote called by convention 'origin' that the current git repository has been cloned from"
+msgid "origin"
+msgstr "原始"
+
+#. ""
+msgid "orphan commit"
+msgstr ""
+
+#. ""
+msgid "orphan reference"
+msgstr ""
+
+#. "a file containing many git objects packed together"
+msgid "pack [noun]"
+msgstr "打包封裝 [noun]"
+
+#. "the process of creating a pack file"
+msgid "pack [verb]"
+msgstr "打包封裝 [verb]"
+
+#. "a Git object part of some pack"
+msgid "packed object"
+msgstr "打包封裝物件"
+
+#. "a commit that directly precedes the current one in git's graph of commits"
+msgid "parent commit"
+msgstr "上次提交"
+
+msgid "patch\" \""
+msgstr "修補\" \""
+
+#. "The path to a file"
+msgid "path"
+msgstr "路徑"
+
+#. "Delete all stale tracking branches under <name>. These stale branches have already been removed from the remote repository referenced by <name>, but are still locally available in 'remotes/<name>'."
+msgid "prune"
+msgstr "清除"
 
 #. "Pulling a branch means to fetch it and merge it."
 msgid "pull"
@@ -98,9 +251,44 @@ msgstr "提取＋合併"
 msgid "push"
 msgstr "推入"
 
+#. "The process of rebasing one set of commits on top of another branch's head"
+msgid "rebase [noun]"
+msgstr "重置為基礎原始碼 [noun]"
+
+#. "Re-apply one set of commits on top of another branch's head. Contrary to merge."
+msgid "rebase [verb]"
+msgstr "重置為基礎原始碼 [verb]"
+
 #. ""
 msgid "redo"
 msgstr "重做"
+
+#. ""
+msgid "reference"
+msgstr "參考"
+
+#. "the log file containing all states of the HEAD reference (in other words past pristine states of the working copy)"
+msgid "reflog"
+msgstr ""
+
+msgid "refmap\"       \""
+msgstr ""
+
+#. ""
+msgid "refspec"
+msgstr ""
+
+#. "The adjective for anything which is outside of the current (local) repository"
+msgid "remote [adj]"
+msgstr "遠端 [adj]"
+
+#. "A branch in any other ('remote') repository"
+msgid "remote branch"
+msgstr "遠端分支"
+
+#. "An other repository ('remote'). One might have a set of remotes whose branches one tracks."
+msgid "remote repository"
+msgstr "遠端程式儲存庫"
 
 #. "A collection of refs (?) together with an object database containing all objects which are reachable from the refs... (oops, you've lost me here. Again, please an explanation for mere mortals?)"
 msgid "repository"
@@ -110,9 +298,21 @@ msgstr "存儲庫"
 msgid "reset"
 msgstr "重置"
 
+#. "decide which changes from alternative versions of a file should persist in Git"
+msgid "resolve (a conflict)"
+msgstr ""
+
+#. "abandon changes and go to pristine version"
+msgid "revert changes"
+msgstr "復原修改"
+
 #. ""
 msgid "revert"
 msgstr "回復"
+
+#. "expression that signifies a revision in git"
+msgid "revision expression"
+msgstr "修訂版本表達式"
 
 #. "A particular state of files and directories which was stored in the object database."
 msgid "revision"
@@ -122,38 +322,86 @@ msgstr "修訂版"
 msgid "sign off"
 msgstr "停止活動"
 
-#. ""似乎是git-gui裡面檢視的本次提交的檔案清單區域
+#. "see: staging area. In some areas of git this is called 'index'."
+msgid "stage [noun], index"
+msgstr "緩衝待提交 [noun], 索引緩衝區"
+
+#. "add some content of files and directories to the staging area in preparation for a commit"
+msgid "stage [verb]"
+msgstr "緩衝待提交 [verb]"
+
+#. "The place where changes from files are marked to be included for the next commit. In some areas of git this is called 'index'."
 msgid "staging area"
 msgstr "暫存區"
+
+#. "The place (stack) where changes can be temporarily saved without committing"
+msgid "stash [noun]"
+msgstr "提交暫存 [noun]"
+
+#. "temporarily save changes in a stack without committing"
+msgid "stash [verb]"
+msgstr "提交暫存 [verb]"
 
 #. ""
 msgid "status"
 msgstr "狀態"
 
-#. "A ref pointing to a tag or commit object"
-msgid "tag [noun]"
-msgstr "標簽"
-
 #. ""
+msgid "submodule"
+msgstr "子模組"
+
+#. "A ref pointing to some commit object. In other words: A label on a specific commit."
+msgid "tag [noun]"
+msgstr "標簽 [noun]"
+
+#. "The process of creating a tag at a specific commit object"
 msgid "tag [verb]"
-msgstr "增加標簽"
+msgstr "標簽 [verb]"
+
+#. "The person who created a tag"
+msgid "tagger"
+msgstr "標記"
+
+#. "file whose content is tracked/not tracked by git"
+msgid "tracked/untracked"
+msgstr "追蹤/未追蹤"
 
 #. "A regular git branch that is used to follow changes from another repository."
 msgid "tracking branch"
 msgstr "追蹤分支"
 
 #. ""
+msgid "trailer"
+msgstr "預告"
+
+#. "1. tree object, 2. directory tree"
+msgid "tree"
+msgstr "樹"
+
+#. ""
 msgid "undo"
 msgstr "復原"
+
+#. "Remove content of files from the staging area again so that it will not be part of the next commit"
+msgid "unstage"
+msgstr "移除緩衝待提交"
+
+#. "Retrieving the temporarily saved changes back again from the stash"
+msgid "unstash [verb]"
+msgstr "移除提交暫存 [verb]"
 
 #. ""
 msgid "update"
 msgstr "更新. 注意和fetch的區分"
 
 #. ""
+msgid "upstream branch"
+msgstr "上游分支"
+
+#. ""
 msgid "verify"
 msgstr "驗證"
 
-#. "The tree of actual checked out files.""工作副本？工作區域？工作目錄"[LI Yang]: 目前副本， 目前源碼樹？
-msgid "working copy, working tree"
-msgstr "工作備份，工作源始碼樹"
+#. "The tree of actual checked out files."
+msgid "working directory, working copy, working tree"
+msgstr "工作目錄, 工作備份, 工作樹"

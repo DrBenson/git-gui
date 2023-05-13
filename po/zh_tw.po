@@ -3,17 +3,18 @@
 #
 # Please use the following translation throughout the file for consistence:
 #
-# 	repository	程式儲存庫
-# 	commit		提交
-# 	revision	修正版本
-# 	branch		分支
-# 	tag		    標簽
-# 	annotation	注釋
-# 	merge		合併
-# 	fast forward	快速合併(??)
-# 	stage		緩衝區 (譯自 index/cache)
-# 	amend		修正
-# 	reset		重置
+# 	repository	     程式儲存庫
+# 	commit           提交
+# 	revision         修正版本
+# 	branch           分支
+# 	tag              標簽
+# 	annotation       注釋
+# 	merge            合併
+# 	fast forward     快速合併(??)
+# 	stash            提交暫存
+# 	stage            緩衝區 (譯自 index/cache)
+# 	amend            修正
+# 	reset            重置
 #
 # DrBenson <Benson.Dr@GMail.com>, 2023
 #
@@ -22,7 +23,7 @@ msgstr ""
 "Project-Id-Version: git-gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-08 22:54+0100\n"
-"PO-Revision-Date: 2023-05-12 20:52+0800\n"
+"PO-Revision-Date: 2023-05-13 18:03+0800\n"
 "Last-Translator: DrBenson <Benson.Dr@GMail.com>\n"
 "Language-Team: Chinese\n"
 "Language: zh_TW\n"
@@ -96,6 +97,11 @@ msgstr "無法使用單純的程式儲存庫:"
 msgid "No working directory"
 msgstr "沒有工作目錄"
 
+#: git-gui.sh:1787
+#, tcl-format
+msgid "Displaying only %s of %s files."
+msgstr ""
+
 #: git-gui.sh:1491 lib/checkout_op.tcl:306
 msgid "Refreshing file status..."
 msgstr "更新檔案狀態..."
@@ -142,6 +148,10 @@ msgstr "部分緩衝為提交"
 msgid "Staged for commit, missing"
 msgstr "緩衝區為提交, 不存在"
 
+#: git-gui.sh:1972
+msgid "Starting gitk... please wait..."
+msgstr ""
+
 #: git-gui.sh:2098
 #| msgid "Untracked, not staged"
 msgid "File type changed, not staged"
@@ -152,9 +162,8 @@ msgid "File type changed, old type staged for commit"
 msgstr ""
 
 #: git-gui.sh:2101
-#, fuzzy
 msgid "File type changed, staged"
-msgstr "檔案類型變更, 未緩衝"
+msgstr "檔案類型變更, 已緩衝"
 
 #: git-gui.sh:2102
 msgid "File type change staged, modification not staged"
@@ -202,7 +211,7 @@ msgstr "目錄中沒有找到 git"
 
 #: git-gui.sh:2726 lib/choose_repository.tcl:53
 msgid "Repository"
-msgstr "程式儲存庫(repository)"
+msgstr "程式儲存庫"
 
 #: git-gui.sh:2727
 msgid "Edit"
@@ -210,23 +219,23 @@ msgstr "編輯"
 
 #: git-gui.sh:2729 lib/choose_rev.tcl:567
 msgid "Branch"
-msgstr "分支(branch)"
+msgstr "分支"
 
 #: git-gui.sh:2732 lib/choose_rev.tcl:554
 msgid "Commit@@noun"
-msgstr "提交(commit)"
+msgstr "提交"
 
 #: git-gui.sh:2735 lib/merge.tcl:127 lib/merge.tcl:174
 msgid "Merge"
-msgstr "合併(merge)"
+msgstr "合併"
 
 #: git-gui.sh:2736 lib/choose_rev.tcl:563
 msgid "Remote"
-msgstr "遠端(remote)"
+msgstr "遠端"
 
 #: git-gui.sh:2739
 msgid "Tools"
-msgstr "工具(Tools)"
+msgstr "工具"
 
 #: git-gui.sh:2748
 msgid "Explore Working Copy"
@@ -289,6 +298,10 @@ msgstr "復原"
 #: git-gui.sh:2839
 msgid "Redo"
 msgstr "重做"
+
+#: git-gui.sh:2619 git-gui.sh:3050
+msgid "New Commit"
+msgstr "新建提交"
 
 #: git-gui.sh:2843 git-gui.sh:3461
 msgid "Cut"
@@ -550,6 +563,10 @@ msgstr "使用本地版本"
 msgid "Revert To Base"
 msgstr "復原到原始基礎"
 
+#: lib/blame.tcl:72
+msgid "File Viewer"
+msgstr "檔案檢視器"
+
 #: git-gui.sh:3744
 msgid "Visualize These Changes In The Submodule"
 msgstr "可視化這些變更在子模組中"
@@ -582,26 +599,20 @@ msgid "Revert Lines"
 msgstr "復原明細"
 
 #: git-gui.sh:3800
-#, fuzzy
-#| msgid "Unstage From Commit"
 msgid "Unstage Line From Commit"
-msgstr "從本次提交撤除"
+msgstr "從提交移除明細"
 
 #: git-gui.sh:3804
 msgid "Stage Hunk For Commit"
 msgstr "緩衝區修改區塊為提交"
 
 #: git-gui.sh:3808
-#, fuzzy
-#| msgid "Stage Hunk For Commit"
 msgid "Stage Lines For Commit"
-msgstr "緩衝區修改明細為提交"
+msgstr "緩衝區修改明細給予提交"
 
 #: git-gui.sh:3811
-#, fuzzy
-#| msgid "Stage Hunk For Commit"
 msgid "Stage Line For Commit"
-msgstr "緩衝區修改明細為提交"
+msgstr "緩衝區修改明細給予提交"
 
 #: git-gui.sh:3861
 msgid "Initializing..."
@@ -694,6 +705,10 @@ msgstr "提取 %s"
 msgid "Fetching new changes from %s"
 msgstr "從 %s 處提取新的變更"
 
+#: lib/branch_create.tcl:22
+msgid "Create Branch"
+msgstr "建立分支"
+
 #: lib/transport.tcl:18
 #, tcl-format
 msgid "remote prune %s"
@@ -756,6 +771,10 @@ msgstr "上傳分支"
 msgid "Cancel"
 msgstr "取消"
 
+#: lib/branch_delete.tcl:15
+msgid "Delete Branch"
+msgstr "刪除分支"
+
 #: lib/transport.tcl:147
 msgid "Source Branches"
 msgstr "來源分支"
@@ -769,10 +788,8 @@ msgid "Remote:"
 msgstr "遠端:"
 
 #: lib/transport.tcl:187 lib/remote_branch_delete.tcl:72
-#, fuzzy
-#| msgid "Arbitrary URL:"
 msgid "Arbitrary Location:"
-msgstr "任意 URL:"
+msgstr "任意位置:"
 
 #: lib/transport.tcl:205
 msgid "Transfer Options"
@@ -820,6 +837,10 @@ msgstr "分支 '%s' 並不存在."
 #| msgid "Failed to configure origin"
 msgid "Failed to configure simplified git-pull for '%s'."
 msgstr ""
+
+#: lib/browser.tcl:26
+msgid "File Browser"
+msgstr "檔案瀏覽器"
 
 #: lib/checkout_op.tcl:202 lib/branch_rename.tcl:102
 #, tcl-format
@@ -984,13 +1005,11 @@ msgstr "立刻提取"
 
 #: lib/remote_add.tcl:69
 msgid "Initialize Remote Repository and Push"
-msgstr "初始化遠端程程式儲存庫並推送上傳"
+msgstr "初始化遠端程式儲存庫並推送上傳"
 
 #: lib/remote_add.tcl:75
-#, fuzzy
-#| msgid "Do Nothing"
 msgid "Do Nothing Else Now"
-msgstr "不做作業"
+msgstr "現在什麼都不做"
 
 #: lib/remote_add.tcl:100
 #| msgid "Please supply a branch name."
@@ -1003,10 +1022,9 @@ msgid "'%s' is not an acceptable remote name."
 msgstr "'%s'不是一個可接受的遠端名稱."
 
 #: lib/remote_add.tcl:124
-#, fuzzy, tcl-format
-#| msgid "Failed to rename '%s'."
+#, tcl-format
 msgid "Failed to add remote '%s' of location '%s'."
-msgstr "無法重新命名 '%s'."
+msgstr "增加遠端'%s'失敗於位置'%s'."
 
 #: lib/remote_add.tcl:133
 #, tcl-format
@@ -1088,10 +1106,8 @@ msgid "files"
 msgstr "檔案"
 
 #: lib/index.tcl:326
-#, fuzzy
-#| msgid "Unstaging %s from commit"
 msgid "Unstaging selected files from commit"
-msgstr "從提交緩衝區中刪除 %s"
+msgstr "從提交緩衝區中移除所選檔案"
 
 #: lib/index.tcl:330
 #, tcl-format
@@ -1539,6 +1555,14 @@ msgstr ""
 msgid "Adding resolution for %s"
 msgstr "增加解析給 %s"
 
+#: lib/error.tcl:20 lib/error.tcl:114
+msgid "error"
+msgstr "錯誤"
+
+#: lib/error.tcl:36
+msgid "warning"
+msgstr "警告"
+
 #: lib/mergetool.tcl:141
 msgid "Cannot resolve deletion or link conflicts using a tool"
 msgstr ""
@@ -1965,6 +1989,10 @@ msgstr "KiB"
 msgid "Unable to copy object: %s"
 msgstr "無法複製物件: %s"
 
+#: lib/remote_add.tcl:19
+msgid "Add Remote"
+msgstr ""
+
 #: lib/choose_repository.tcl:837
 msgid "Linking objects"
 msgstr "連結物件"
@@ -2017,10 +2045,8 @@ msgid "Initial file checkout failed."
 msgstr "初始檔案檢測失敗."
 
 #: lib/choose_repository.tcl:1072
-#, fuzzy
-#| msgid "Cloning from %s"
 msgid "Cloning submodules"
-msgstr "從 %s 複製"
+msgstr "正在複製子模組"
 
 #: lib/choose_repository.tcl:1087
 msgid "Cannot clone submodules."
@@ -2070,10 +2096,8 @@ msgid "Show History Context"
 msgstr "顯示歷史內文"
 
 #: lib/blame.tcl:306
-#, fuzzy
-#| msgid "Amend Last Commit"
 msgid "Blame Parent Commit"
-msgstr "修正上次提交"
+msgstr "修正上次提交過失"
 
 #: lib/blame.tcl:468
 #, tcl-format
@@ -2116,6 +2140,10 @@ msgstr "載入註釋..."
 msgid "Author:"
 msgstr "作者:"
 
+#: lib/search.tcl:25
+msgid "Case-Sensitive"
+msgstr "區分大小寫"
+
 #: lib/blame.tcl:1014
 msgid "Committer:"
 msgstr "提交者:"
@@ -2134,10 +2162,8 @@ msgid "Cannot find parent commit:"
 msgstr ""
 
 #: lib/blame.tcl:1137
-#, fuzzy
-#| msgid "Unable to display %s"
 msgid "Unable to display parent"
-msgstr "無法顯示 %s"
+msgstr "無法顯示上級"
 
 #: lib/blame.tcl:1138 lib/diff.tcl:345
 msgid "Error loading diff:"
@@ -2240,38 +2266,36 @@ msgid "Failed to unstage selected hunk."
 msgstr "無法將選取的程式碼段從緩衝區中刪除."
 
 #: lib/diff.tcl:591
-#, fuzzy
-#| msgid "Failed to stage selected hunk."
 msgid "Failed to revert selected hunk."
-msgstr "無法緩衝區所選程式碼段."
+msgstr "無法復原緩衝所選區段."
+
+#: lib/tools_dlg.tcl:22
+msgid "Add Tool"
+msgstr "增加工具"
 
 #: lib/diff.tcl:594
 msgid "Failed to stage selected hunk."
 msgstr "無法緩衝區所選程式碼段."
 
 #: lib/diff.tcl:687
-#, fuzzy
-#| msgid "Failed to unstage selected hunk."
 msgid "Failed to unstage selected line."
-msgstr "無法將選取的程式碼段從緩衝區中刪除."
+msgstr "無法將選取的明細從緩衝區中移除."
 
 #: lib/diff.tcl:696
-#, fuzzy
-#| msgid "Failed to stage selected hunk."
 msgid "Failed to revert selected line."
-msgstr "無法緩衝區所選程式碼段."
+msgstr "無法復原緩衝所選明細."
 
 #: lib/diff.tcl:700
-#, fuzzy
-#| msgid "Failed to stage selected hunk."
 msgid "Failed to stage selected line."
-msgstr "無法緩衝區所選程式碼段."
+msgstr "無法緩衝所選明細."
 
 #: lib/diff.tcl:889
-#, fuzzy
-#| msgid "Failed to update '%s'."
 msgid "Failed to undo last revert."
-msgstr "無法更新 '%s'."
+msgstr "撤消上次還原失敗."
+
+#: lib/tools_dlg.tcl:190
+msgid "Remove Tool"
+msgstr "刪除工具"
 
 #: lib/sshkey.tcl:34
 msgid "No keys found."
@@ -2389,7 +2413,7 @@ msgstr "前往"
 
 #: lib/choose_rev.tcl:52
 msgid "This Detached Checkout"
-msgstr "該分離的檢測t"
+msgstr "該分離的檢測"
 
 #: lib/choose_rev.tcl:60
 msgid "Revision Expression:"
@@ -2564,7 +2588,7 @@ msgstr ""
 
 #: lib/commit.tcl:327
 msgid "Committing changes..."
-msgstr ""
+msgstr "提交變更..."
 
 #: lib/commit.tcl:344
 msgid "write-tree failed:"
@@ -2680,10 +2704,9 @@ msgid "Garbage files"
 msgstr "垃圾檔案"
 
 #: lib/database.tcl:66
-#, fuzzy, tcl-format
-#| msgid "Database Statistics"
+#, tcl-format
 msgid "%s (%s): Database Statistics"
-msgstr "程式資料庫統計資訊"
+msgstr "%s (%s): 程式資料庫統計資訊"
 
 #: lib/database.tcl:72
 msgid "Compressing the object database"
@@ -2694,14 +2717,7 @@ msgid "Verifying the object database with fsck-objects"
 msgstr "使用 fsck-objects 驗證物件程式資料庫"
 
 #: lib/database.tcl:107
-#, fuzzy, tcl-format
-#| msgid ""
-#| "This repository currently has approximately %i loose objects.\n"
-#| "\n"
-#| "To maintain optimal performance it is strongly recommended that you "
-#| "compress the database when more than %i loose objects exist.\n"
-#| "\n"
-#| "Compress the database now?"
+#, tcl-format
 msgid ""
 "This repository currently has approximately %i loose objects.\n"
 "\n"
@@ -2710,11 +2726,11 @@ msgid ""
 "\n"
 "Compress the database now?"
 msgstr ""
-"該程式儲存庫目前約有 %i 個松散物件.\n"
+"該程式儲存庫目前約有 %i 個鬆散物件.\n"
 "\n"
-"為達到較優的效能，強烈建議你在松散物件多於 %i 時壓縮程式資料庫.\n"
+"為達到較優的效能，強烈建議你壓縮程式資料庫.\n"
 "\n"
-"現在就壓縮程式資料庫麼?"
+"現在要壓縮程式資料庫?"
 
 #: lib/error.tcl:20
 #, tcl-format
@@ -2738,7 +2754,7 @@ msgstr "你必須在提交前修正上述錯誤."
 #: lib/error.tcl:116
 #, tcl-format
 msgid "%s (%s): error"
-msgstr ""
+msgstr "%s (%s): 錯誤"
 
 #: lib/merge.tcl:13
 msgid ""
@@ -2803,7 +2819,7 @@ msgstr ""
 #: lib/merge.tcl:108
 #, tcl-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s 於 %s"
 
 #: lib/merge.tcl:126
 #, tcl-format
@@ -2821,7 +2837,7 @@ msgstr "合併失敗. 需要解決衝突."
 #: lib/merge.tcl:156
 #, tcl-format
 msgid "%s (%s): Merge"
-msgstr ""
+msgstr "%s (%s): 合併"
 
 #: lib/merge.tcl:164
 #, tcl-format
@@ -2910,9 +2926,6 @@ msgstr "無"
 #~ "無法啟動 gitk:\n"
 #~ "\n"
 #~ "%s 不存在"
-
-#~ msgid "New Commit"
-#~ msgstr "新建提交"
 
 #~ msgid "Apple"
 #~ msgstr "蘋果"
